@@ -24,7 +24,7 @@ int main(){
     
     // Capturando os dados da primeira carta:
     //inserindo o estado:
-    printf("Digite o estado da sua primeira carta: \n");
+    printf("Digite o estado da sua primeira carta (ex: A): \n");
     scanf("%s", estadoA);
     
     //inserindo o código:
@@ -55,7 +55,7 @@ int main(){
     
     // Capturando os dados da segunda carta:
     //inserindo o estado:
-    printf("Agora digite o estado da sua segunda carta: \n");
+    printf("Agora digite o estado da sua segunda carta (ex: B): \n");
     scanf("%s", estadoB);
     
     //inserindo o código:
@@ -81,9 +81,19 @@ int main(){
     //inserindo o número de pontos turisticos:
     printf("Digite o número de pontos turísticos da cidade: \n");
     scanf("%d", &pontos_turisticosB);
+
+    // Calculando Densidade Populacional e PIB per Capita:
     
-    printf("\nCarta A:\nEstado: %s\nCódigo: %s\nNome: %s\nPopulação: %d\nÁrea: %f\nPIB: %f\nNúmero de pontos Turísticos: %d\n", estadoA, codigoA, nomeA, populacaoA, areaA, pibA, pontos_turisticosA);
-    printf("\nCarta B:\nEstado: %s\nCódigo: %s\nNome: %s\nPopulação: %d\nÁrea: %f\nPIB: %f\nNúmero de pontos Turísticos: %d", estadoB, codigoB, nomeB, populacaoB, areaB, pibB, pontos_turisticosB);
+    // Primeira Carta:
+    float densidadePop1 = populacaoA / areaA;
+    float PIBperC1 = pibA / populacaoA;
+
+    // Segunda carta
+    float densidadePop2 = populacaoB / areaB;
+    float PIBperC2 = pibB / populacaoB;
+    
+    printf("\nCarta A:\nEstado: %s\nCódigo: %s\nNome: %s\nPopulação: %d\nÁrea: %f km²\nPIB: %f\nNúmero de pontos Turísticos: %d\nDensidade populacional: %.2f hab/km²\nPIB per capita: %.2f Reais\n", estadoA, codigoA, nomeA, populacaoA, areaA, pibA, pontos_turisticosA, densidadePop1, PIBperC1);
+    printf("\nCarta B:\nEstado: %s\nCódigo: %s\nNome: %s\nPopulação: %d\nÁrea: %f km²\nPIB: %f\nNúmero de pontos Turísticos: %d\nDensidade populacional: %.2f hab/km²\nPIB per capita: %.2f Reais", estadoB, codigoB, nomeB, populacaoB, areaB, pibB, pontos_turisticosB, densidadePop2, PIBperC2);
 
     return 0;
 }
