@@ -100,17 +100,16 @@ int main(){
     float inversoDensiB = 1 / densidadePop2;
     
     // calculando propriamente o super poder
-    int poderA = (float) populacaoA + areaA + pibA + pontos_turisticosA + inversoDensiA;
-    int poderB = (float) populacaoB + areaB + pibB + pontos_turisticosB + inversoDensiB;
+    float poderA = populacaoA + areaA + pibA + pontos_turisticosA + inversoDensiA;
+    float poderB = populacaoB + areaB + pibB + pontos_turisticosB + inversoDensiB;
 
     
-    printf("\nCarta A:\nEstado: %s\nCódigo: %s\nNome: %s\nPopulação: %lu\nÁrea: %f km²\nPIB: %f\nNúmero de pontos Turísticos: %d\nDensidade populacional: %.2f hab/km²\nPIB per capita: %.2f Reais\n", estadoA, codigoA, nomeA, populacaoA, areaA, pibA, pontos_turisticosA, densidadePop1, PIBperC1);
-    //printf("Super Poder: %f\n", poderA);
-    printf("\nCarta B:\nEstado: %s\nCódigo: %s\nNome: %s\nPopulação: %lu\nÁrea: %f km²\nPIB: %f\nNúmero de pontos Turísticos: %d\nDensidade populacional: %.2f hab/km²\nPIB per capita: %.2f Reais\n", estadoB, codigoB, nomeB, populacaoB, areaB, pibB, pontos_turisticosB, densidadePop2, PIBperC2);
-    //printf("Super Poder: %f", poderB);
+    printf("\nCarta A:\nEstado: %s\nCódigo: %s\nNome: %s\nPopulação: %lu\nÁrea: %f km²\nPIB: %f\nNúmero de pontos Turísticos: %d\nDensidade populacional: %.2f hab/km²\nPIB per capita: %.2f Reais\nSuper Poder: %f\n", estadoA, codigoA, nomeA, populacaoA, areaA, pibA, pontos_turisticosA, densidadePop1, PIBperC1, poderA);
+    printf("\nCarta B:\nEstado: %s\nCódigo: %s\nNome: %s\nPopulação: %lu\nÁrea: %f km²\nPIB: %f\nNúmero de pontos Turísticos: %d\nDensidade populacional: %.2f hab/km²\nPIB per capita: %.2f Reais\nSuper Poder: %f\n", estadoB, codigoB, nomeB, populacaoB, areaB, pibB, pontos_turisticosB, densidadePop2, PIBperC2, poderB);
+    
 
     // Calculando a carta vencedora
-    printf("Comparação das Cartas:\n");
+    printf("\nComparação das Cartas:\n");
     //exibindo explicação
     printf("A carta vencedora é definida pela melhor sequencia de número 1 (exceto na densidade populacional)\n");
 
