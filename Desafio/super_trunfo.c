@@ -130,6 +130,16 @@ int main(){
     printf("PIB per Capita: Carta 1 venceu (%d)\n", resultPibPercap);
     printf("Super Poder: Carta 1 venceu (%d)\n", resultPoder);
 
+    // Comparação de um atribulo (desafio novato tema2)
+    printf("Comparação das cartas (Atributo: PIB)\n");
+    printf("Carta 1- %s (%s): %f\n", nomeA, estadoA, pibA);
+    printf("Carta 2- %s (%s): %f\n", nomeB, estadoB, pibB);
+    
+    if(pibA > pibB){
+        printf("Carta 1- %s (%s) venceu!\n", nomeA, estadoA);
+    }else {
+        printf("Carta 2- %s (%s) venceu!\n", nomeB, estadoB);
+    }
 
     
 
